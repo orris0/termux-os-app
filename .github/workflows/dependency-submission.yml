@@ -5,12 +5,13 @@ on:
     branches: [ 'master' ]
   workflow_dispatch:
 
-permissions:
-  contents: write
+permissions: {}
 
 jobs:
   dependency-submission:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
     - name: Checkout sources
       uses: actions/checkout@v6
